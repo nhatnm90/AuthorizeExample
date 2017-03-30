@@ -1,0 +1,30 @@
+﻿@using Example1.ViewModel
+@model UserViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListUser</title>
+</head>
+<body>
+    <div> 
+        <table>
+                <thead>Name</thead>
+                <thead>Body</thead>
+           
+                @foreach (var item in Model.ListOfUser)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Password</td>
+                    </tr>
+                }
+        </table>
+    </div>
+</body>
+</html>
